@@ -1,0 +1,13 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <h2><%= link_to post.title, post_path(post) %></h2>
+
+    <div class="date">
+      <span class="glyphicon glyphicon-time"></span>
+      <%= post.created_at.strftime("%B %d, %Y") %>
+    </div>
+
+    <%= link_to "Read more &rarr;".html_safe, post_path(post) %>
+  </div>
+
+<% end %>

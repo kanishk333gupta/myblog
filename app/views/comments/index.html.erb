@@ -1,0 +1,15 @@
+
+<h1><%= @post.body %></h1>
+<% @comments.each do |comment| %>
+  <div class="post">
+    <h2><%= link_to comment.description%></h2>
+
+    <div class="date">
+      <span class="glyphicon glyphicon-time"></span>
+      <%= comment.created_at.strftime("%B %d, %Y") %>
+    </div>
+
+    <%= link_to "Read more &rarr;".html_safe %>
+  </div>
+
+<% end %>
