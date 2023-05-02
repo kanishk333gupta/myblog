@@ -3,3 +3,5 @@
 <p><%= @post.body %></p>
 <p>Created by User ID = <%= @post.user_id %></p>
 <p>Published on Date : <%= @post.created_at %></p>
+
+<p><%=link_to "post download (PDF)" ,post_path(@post,format: "pdf")%></p>
